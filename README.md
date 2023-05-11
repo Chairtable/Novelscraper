@@ -1,4 +1,4 @@
-# Novelscraper
+# Novelscraper | <sub><sup>Python, Django, SQL, HTML, CSS, Javascript, Selenium</sup></sub>
 The Novelscraper project Scrapes Novels from website to SQL Database using scraper.py and hosts Novel Chapters via Django dynamically via templates.
 ## Instructions
 * Edit settings details in scraper.py and change URL to supported host <br>
