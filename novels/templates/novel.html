@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ novelName }}</title>
+</head>
+<body>
+    <b><h1>{{ novelName }}</h1></b>
+    <h1>List of Chapters:</h1>
+    <br>
+
+<table>
+    <tr>
+        <th>Chapter</th>
+        <th>Link</th>
+    </tr>
+{% for element in test %} 
+    <tr>  
+        <td style='text-align:center; vertical-align:middle'>Chapter {{ element.chapter_num }}</td>    
+        <td><a href="{{ novID }}/chapter/{{ element.chapter_num }}">View</a></td>  
+    </tr>
+{% endfor %}  
+</table>
+
+
+</body>
+</html>

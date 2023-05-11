@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novels</title>
+</head>
+<style>
+    table, th, td {border: 1px solid black;}
+</style>
+<body>
+    <b><h1>List of Novels:</h1></b>
+    <br>
+<table>  
+    <tr>  
+        <th>Novel Name</th>  
+        <th>Number of Chapters</th>  
+        <th>MTL</th>
+        <th>Link</th>
+        
+    </tr>   
+{% for novel in novelslist %} 
+    <tr>  
+        <td style='text-align:center; vertical-align:middle'>{{ novel.novel_name }}</td>  
+        <td style='text-align:center; vertical-align:middle'>{{ novel.novel_numchapters }}</td> 
+        <td style='text-align:center; vertical-align:middle'>Yes</a></td>   
+        <td><a href="novels/{{ novel.novel_id }}">View</a></td>  
+    </tr>
+{% endfor %}  
+</table>
+</body>
+</html>

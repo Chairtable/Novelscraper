@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head> ADD INDEX TO PREV/NEXT -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Chapter {{ chapternumber }}</title>
+    <script>
+        //dynamic next and previous page link
+        $(document).ready(function(){
+        let chapNum = parseInt(document.getElementById("cNum").innerHTML);
+        let nextChapNum = chapNum + 1;
+        let prevChapNum = chapNum - 1;
+        if (chapNum < 1){ prevChapNum = 1; }
+        let nextLink = "../"+nextChapNum.toString();
+        let prevLink = "../"+prevChapNum.toString();
+        $('#nextC').attr('href', nextLink);
+        $('#prevC').attr('href', prevLink);
+        });
+    </script>
+</head>
+<body>
+    <b><h1>Chapter {{ chapternumber }}</h1></b>
+    <br>
+<pre>{{ chapter.chapter_text }}</pre>
+<footer><center><a id="prevC" href="{{ novID }}/chapter/">Previous Chapter</a>
+    -----------------------------------
+    <a id="nextC" href="{{ novID }}/chapter/">Next Chapter</a>
+</center>    
+</footer>
+<div id="cNum" style="visibility:hidden">{{ chapternumber }}</div>
+<!-- <div id="nID" style="visibility:hidden">{{ novelID }}</div> -->
+</body>
+</html>
